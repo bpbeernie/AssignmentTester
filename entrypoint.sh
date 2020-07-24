@@ -1,17 +1,18 @@
 #!/bin/bash
 
-printf "======================================================"
-printf "Testing GET"
+printf "\n======================================================\n"
+printf "Testing GET\n"
 
-curl -X GET \
+curl -s -X GET \
   "$TESTURL/api/tasks" \
   -H 'cache-control: no-cache' \
-  -H 'content-type: application/json'
+  -H 'content-type: application/json' \
+  | python -m json.tool
 
-printf "======================================================"
-printf "Testing POST"
+printf "\n======================================================\n"
+printf "Testing POST\n"
 
-curl -X POST \
+curl -s -X POST \
   "$TESTURL/api/tasks" \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
@@ -23,12 +24,16 @@ curl -X POST \
         "priority": 1,
         "category": "top",
         "status": 200
-    }'
+    }' \
+    | python -m json.tool
 
-printf "======================================================"
-printf "Testing GET Again!"
+printf "\n======================================================\n"
+printf "Testing GET Again!\n"
 
-curl -X GET \
+curl -s -X GET \
   "$TESTURL/api/tasks" \
   -H 'cache-control: no-cache' \
-  -H 'content-type: application/json'
+  -H 'content-type: application/json' \
+    | python -m json.tool
+
+printf "\n======================================================\n"
