@@ -3,14 +3,14 @@
 echo "Testing GET"
 
 curl -X GET \
-  $TESTURL/api/tasks \
+  "$TESTURL/api/tasks" \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json'
 
 echo "Testing POST"
 
 curl -X POST \
-  $TESTURL/api/tasks \
+  "$TESTURL/api/tasks" \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '    {
@@ -26,6 +26,6 @@ curl -X POST \
 echo "Testing GET Again!"
 
 curl -X GET \
-  $TESTURL/api/tasks \
+  "$TESTURL/api/tasks" \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json'
