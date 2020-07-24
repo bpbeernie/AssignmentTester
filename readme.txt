@@ -9,7 +9,9 @@ A. To run API
 
 B. To run Production API
 
-1. RUN "docker-compose -f docker-compose-prod.yml up"
+1. CD to Assignment1 folder
+
+2. RUN "docker-compose -f docker-compose-prod.yml up"
 
 
 C. To run Tester
