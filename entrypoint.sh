@@ -1,7 +1,7 @@
 #!/bin/bash
 
 printf "\n======================================================\n"
-printf "Testing GET\n"
+printf "Testing First GET, Will contain initial seeded\n"
 
 curl -s -X GET \
   "$TESTURL/api/tasks" \
@@ -28,7 +28,7 @@ curl -s -X POST \
     | python -m json.tool
 
 printf "\n======================================================\n"
-printf "Testing GET Again!\n"
+printf "Testing Second GET, Should Include Recent POST\n"
 
 curl -s -X GET \
   "$TESTURL/api/tasks" \
