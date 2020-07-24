@@ -1,13 +1,15 @@
 #!/bin/bash
 
-echo "Testing GET"
+printf "======================================================"
+printf "Testing GET"
 
 curl -X GET \
   "$TESTURL/api/tasks" \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json'
 
-echo "Testing POST"
+printf "======================================================"
+printf "Testing POST"
 
 curl -X POST \
   "$TESTURL/api/tasks" \
@@ -23,7 +25,8 @@ curl -X POST \
         "status": 200
     }'
 
-echo "Testing GET Again!"
+printf "======================================================"
+printf "Testing GET Again!"
 
 curl -X GET \
   "$TESTURL/api/tasks" \
