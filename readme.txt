@@ -16,7 +16,7 @@ C. To run Tester
 
 1. RUN "docker ps" to list all services, find the container ID for image "bpbeernie/taskapi"
 
-2. With container ID from 1., RUN "docker inspect -f {{.NetworkSettings.Networks.assignment1_assignmentnetwork.IPAddress}} <<Container ID>>"
+2. With container ID from 1., RUN "docker inspect -f {{.NetworkSettings.Networks.assignment1_assignmentnetwork.IPAddress}} <<Container ID>>" to get the IP Address of the TaskAPI.
 
 3. RUN "docker build --tag bpbeernie/tester ."
 
