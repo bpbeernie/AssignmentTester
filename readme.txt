@@ -6,8 +6,6 @@ A. To run API
 
 2. RUN "docker-compose up"
 
-3. If prompted, hit Y to build the images.
-
 
 B. To run Production API
 
